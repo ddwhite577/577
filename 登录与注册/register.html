@@ -1,0 +1,361 @@
+  <!--学生管理系统登录首页-->
+ <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册页面</title>
+<!--样式-->
+<style>
+body{
+	 background:#ccc;
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+background: url(regbg.jpg) no-repeat;
+background-size:cover;
+}
+#content{
+	background:#fff;
+	width:500px;
+	height:550px;
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	background-color:rgba(255,255,255,0.2);
+}
+#forms{
+	background:#ccc;
+	width:480px;
+	height:500px;
+	display:flex;
+	flex-direction: column;
+	justify-content:space-around;
+	padding-left:50px;
+	box-sizing:border-box;
+	background-color:rgba(255,255,255,0.3);
+}
+#username{}
+#name{
+background-color:rgba(255,255,255,0.5);
+outline:none;
+border:none;
+border-radius:5px;
+color:black;
+}
+#useraccount{}
+#account{
+background-color:rgba(255,255,255,0.5);
+outline:none;
+border:none;
+border-radius:5px;
+color:black;
+}
+#userpwd{}
+#pwd{
+background-color:rgba(255,255,255,0.5);
+outline:none;
+border:none;
+border-radius:5px;
+color:black;
+}
+#userqq{}
+#qq{
+background-color:rgba(255,255,255,0.5);
+outline:none;
+border:none;
+border-radius:5px;
+color:black;
+}
+#usercode{
+width:450px;
+height:40px;
+}
+#code{
+background-color:rgba(255,255,255,0.5);
+outline:none;
+border:none;
+border-radius:5px;
+color:black;
+}
+#codespan{
+background-color:rgba(255,255,255,0.5);
+outline:none;
+border:none;
+border-radius:5px;
+color:black;
+}
+#usertype{
+display:flex;
+justify-content:center;
+width:250px;
+height:40px;
+}
+#type
+{
+background-color:rgba(255,255,255,0.5);
+outline:none;
+border:none;
+border-radius:5px;
+color:black;
+}
+#lgn{
+background-color:rgba(255,255,255,0.6);
+outline:none;
+border:none;
+border-radius:5px;
+color:black;
+}
+#lgn:hover{
+cursor:pointer;
+transition-duration:0.4s;
+background-color:#008CBA;
+}
+#lgn:active{
+background-color: ##008CBF;
+  box-shadow: 0 2px #666;
+  transform: translateY(1px);
+   cursor:default
+}
+#submit{
+display:flex;
+justify-content:center;
+position:relative;
+left:-30px;
+}
+#st:hover{
+cursor:pointer;
+transition-duration:0.4s;
+background-color:#008CBA;
+}
+#st:active{
+background-color: ##008CBF;
+  box-shadow: 0 2px #666;
+  transform: translateY(1px);
+   cursor:default
+}
+#st{
+background-color:rgba(255,255,255,0.6);
+outline:none;
+border:none;
+border-radius:6px;
+color:black;}
+</style>
+<!--脚本-->
+<script>
+//验证码实现
+function CreateCode()
+{
+	//创建四位随机数
+	var code=Math.floor(Math.random()*9000+1000);
+	//获取元素对象
+	var span=document.getElementById("codespan");
+	//将数字放到span中显示
+	span.innerHTML=code;
+	span.style.color="green";
+}
+
+//验证用户名是否符合规则
+function CheckUname(){
+	//获取用户名信息
+	var uname=document.getElementById("name").value;
+	//获取span对象
+	var span=document.getElementById("namespan");
+	//创建校验规则 正则 [\u4e00-\u9fa5]匹配一个汉子 {2,8}表示2-8个汉字
+	var reg=/^[\u4e00-\u9fa5]{0,8}[0-9]{0,8}[a-z]{0,8}[A-Z]{0,8}$/;
+	//开始校验
+	if(uname==""||uname==null)
+	{
+		span.innerHTML="用户名不为空";
+		span.style.color="red";
+		return false;
+	}else if(reg.test(uname)){
+		span.innerHTML="用户名符合规则";
+		span.style.color="green";
+		return true;
+	}else{
+		span.innerHTML="用户名不符合规则";
+		span.style.color="red";
+		return false;
+	}
+	//输出校验结果
+}
+//账号验证
+function CheckAccount()
+{
+	//获取用户输入的账号
+	var account=document.getElementById("account").value;
+	//获取span对象
+	var span=document.getElementById("accountspan");
+	//创建校验规则
+	var reg=/^[0-9]{8,11}$/;
+	//开始校验
+	if(account==""||account==null)
+	{
+		span.innerHTML="*账号不为空";
+		span.style.color="red";
+		return false;
+	}else if(reg.test(account)){
+		span.innerHTML="*账号符合命名规则";
+		span.style.color="green";
+		return true;
+	}else{
+		span.innerHTML="*账号不符合命名规则";
+		span.style.color="red";
+		return false;
+	}
+	//输出校验结果
+}
+//验证密码
+function CheckPwd()
+{
+	//获取用户输入的密码
+	var pwd=document.getElementById("pwd").value;
+	//创建校验规则
+	var reg=/^[^\u4e00-\u9fa5]{6,16}$/;
+	//获取span对象
+	var span=document.getElementById("pwdspan");
+	//开始校验
+	if(pwd==""||pwd==null)
+	{
+		span.innerHTML="*密码不为空";
+		span.style.color="red";
+		return false;
+	}else if(reg.test(pwd)){
+		span.innerHTML="*密码符合命名规则";
+		span.style.color="green";
+		return true;
+	}else{
+		span.innerHTML="*密码不符合命名规则";
+		span.style.color="red";
+		return false;
+	}
+	//输出校验结果
+}
+//qq校验
+function CheckQq()
+{
+//获取用户输入的密码
+	var qq=document.getElementById("qq").value;
+	//创建校验规则
+	var reg=/^[1-9][0-9]{4,10}$/;
+	//获取span对象
+	var span=document.getElementById("qqspan");
+	//开始校验
+	if(qq==""||qq==null)
+	{
+		span.innerHTML="QQ账号不为空";
+		span.style.color="red";
+		return false;
+	}else if(reg.test(qq)){
+		span.innerHTML="QQ账号正确";
+		span.style.color="green";
+		return true;
+	}else{
+		span.innerHTML="QQ账号不符合命名规则";
+		span.style.color="red";
+		return false;
+	}
+	//输出校验结果
+}
+//验证码校验
+function CheckCode()
+{
+//获取用户输入的密码
+	var code=document.getElementById("code").value;
+	//创建校验规则
+	var reg=/^[0-9]{4}$/;
+	//获取span对象
+	var spans=document.getElementById("codespans");
+	//获取显示的验证码
+	var span=document.getElementById("codespan").innerText;
+	//alert(span);
+	//alert(code);
+	//开始校验
+	if(code==""||code==null)
+	{
+		spans.innerHTML="验证码不为空";
+		spans.style.color="red";
+		return false;
+	}else if(reg.test(code)&&span==code){
+		spans.innerHTML="验证码正确";
+		spans.style.color="green";
+		return true;
+	}else{
+		spans.innerHTML="验证码不正确";
+		spans.style.color="red";
+		return false;
+	}
+	//输出校验结果
+	return false;
+}
+//提交的时候校验
+function CheckSub()
+{
+CheckAccount();
+CheckUname();
+CheckPwd();
+CheckQq();
+CheckCode();
+//return false;
+return CheckAccount()&&CheckUname()&&CheckPwd()&&CheckQq()&&CheckCode();
+}
+</script>
+</head>
+<body onload="CreateCode()">
+<!--注册标题-->
+<center><h1>用户注册</h1></center>
+<!--返回登录页面-->
+<a href="index.html">
+	<div style="position:fixed; top:5px;right:20px;">
+		<input id="lgn" style="width:100px;height:50px;outline:none;" type="submit" value="立即登录">
+	</div>
+</a>
+<!--用户注册面板-->
+<div id="content">
+	<!--表单-->
+	<form action="success_reg.html" method="post" onsubmit="return CheckSub();">
+	<div id="forms">
+		<!--自顶上下的用户填写信息-->
+		
+		<!--用户名-->
+		<div id="username">
+			<input id="name" type="text" placeholder="请填写用户名 (2~8字符、数字等)" name="Name" maxlength="16" onblur="CheckUname()" style=" width:250px;height:40px;outline:none;">
+			<font face="楷体"><span id="namespan" style="font-size:16px;font-weight:bold;"></span></font>
+		</div>
+		<!--用户账号 -->
+		<div id="useraccount">
+			<input id="account" type="text" placeholder="请填写用户账号 (8~11数字)" name="Account" maxlength="16" onblur="CheckAccount()" style="width:250px;height:40px;outline:none;">
+			<font face="楷体"><span id="accountspan" style="font-size:16px;font-weight:bold;"></span></font>
+		</div>
+		<!--用户密码-->
+		<div id="userpwd">
+			<input id="pwd" type="text" placeholder="请填写用户密码 (6~16数字、字母等)" name="Pwd" maxlength="20" onblur="CheckPwd()" Style="width:250px;height:40px;outline:none;">
+			<font face="楷体"><span id="pwdspan" style="font-size:16px;font-weight:bold;"></span></font>
+		</div>
+		<!--用户QQ联系方式-->
+		<div id="userqq">
+			<input id="qq" type="text" placeholder="请填写用户QQ联系方式" name="Qq" maxlength="20" onblur="CheckQq()" Style="width:250px;height:40px;outline:none;">
+			<font face="楷体"><span id="qqspan" style="font-size:16px;font-weight:bold;"></span></font>
+		</div>
+		<!--验证码 当前页面验证-->
+		<div id="usercode">
+			<input id="code" type="text" placeholder="输入验证码" name="Codes" maxlength="4" onblur="CheckCode()" style="width:80px;height:30px;outline:none;">
+			&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="text-decoration:none;"><span id="codespan" onclick="CreateCode()" style="background-image:url(code.jpeg);background-size: 100%; font-size:20px;"></span></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;<font face="楷体"><span id="codespans" style="font-size:16px;font-weight:bold;"></span></font>
+		</div>
+		
+		<!--用户备注按钮 即注册用户的类型 学生或教师-->
+		<div id="usertype">
+			<input id="type" type="radio" value="学生" name="Choice" >学生</input>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="教师" name="Choice" <%if choice="教师" then response.write "checked" end if%>>教师</input>
+		</div>
+		<!--表单提交按钮-->
+		<div id="submit">
+			<input id="st" type="submit"  style="width:90px;height:40px;outline:none;">
+		</div>
+	</div>
+	</form>
+</div>
+</body>
+</html>
