@@ -1,0 +1,31 @@
+案例需求
+*用户登录案例需求
+       1、编写login.html登录页面
+            username & password 两个输入框
+       2、使用Druid数据库连接池技术，操作mysql，day14数据库中user表
+       3、使用JdbcTemplate技术封装JDBC
+       4、登录成功跳转到SuccessServlet展示：登录成功！用户名，欢迎你
+       5、登录失败跳转FailServlet展示：登录失败，用户名或密码错误
+
+
+创建数据库：
+       create database users;
+
+创建一张表：
+        create table user(
+            id int primary key auto_increment,    -- id号
+            username varchar(32) unique not null, -- 用户名唯一 并且不为空
+            password varchar(32) not null
+        );
+插入一个用户：
+        insert into user(username,password) value("ant","123456");
+
+创建一个包：
+        cn.studentwebsite.domain
+创建一个用户实体类：
+        User
+
+创建包：
+        cn.studentwebsite.dbacceptObject(简称dao)
+创建一个操作数据库的类：
+        UserDao 提供login方法

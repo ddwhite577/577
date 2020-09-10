@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9672626c-eb91-42f5-87df-0f7bb68dda04" name="默认更改列表" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1gXmSoPCC8glWQ4u06wvScGuK20" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="12" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="leetcode.id" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9672626c-eb91-42f5-87df-0f7bb68dda04" name="默认更改列表" comment="" />
+      <created>1598269316421</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598269316421</updated>
+      <workItem from="1598269323274" duration="401000" />
+      <workItem from="1599024272233" duration="635000" />
+      <workItem from="1599025105138" duration="882000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="71" key="#项目结构" timestamp="1598269366583">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="71" key="#项目结构/0.0.1536.824@0.0.1536.824" timestamp="1598269366583" />
+    <state x="279" y="167" key="FileChooserDialogImpl" timestamp="1598269547628">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="279" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1598269547628" />
+    <state x="0" y="54" key="SettingsEditor" timestamp="1599025209442">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1599025209442" />
+    <state x="0" y="23" key="new project wizard" timestamp="1598269360136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="23" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1598269360136" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599025823658">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1599025823658" />
+  </component>
+</project>

@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SimpleConvertText">
+    <output-path>$PROJECT_DIR$/../../JavaEXE</output-path>
+    <root id="archive" name="SimpleConvertText.jar">
+      <element id="directory" name="ConvertText">
+        <element id="file-copy" path="$PROJECT_DIR$/stage2/src/stage2/ImagetextConvertText/ConvertText.java" />
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../../JavaEXE/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

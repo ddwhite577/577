@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="aip-java-sdk-4.11">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../java需要用到的包/百度AI的java sdk包/aip-java-sdk-4.11.1" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../../java需要用到的包/百度AI的java sdk包/aip-java-sdk-4.11.1" recursive="false" />
+  </library>
+</component>

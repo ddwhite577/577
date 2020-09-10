@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../JavaWebLink/JavaWebLink.iml" filepath="$PROJECT_DIR$/../JavaWebLink/JavaWebLink.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWebsite.iml" filepath="$PROJECT_DIR$/JavaWebsite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../anli/anli.iml" filepath="$PROJECT_DIR$/../anli/anli.iml" />
+    </modules>
+  </component>
+</project>
